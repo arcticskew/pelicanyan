@@ -37,12 +37,16 @@
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/poole.css"/>
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/syntax.css"/>
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/lanyon.css"/>
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/styles.css"/>
     {% endblock head %}
   </head>
 
+  {% if THEMEBASE %}
+  <body class="{{ THEMEBASE }}">
+  {% else %}
   <body>
+  {% endif %}
     {% include 'sidebar.html' %}
     <div class="wrap">
       <div class="masthead">
@@ -61,21 +65,6 @@
       </div>
 
       <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
-      <script>
-        (function(document) {
-          var i = 0;
-          // snip empty header rows since markdown can't
-          var rows = document.querySelectorAll('tr');
-          for(i=0; i<rows.length; i++) {
-            var ths = rows[i].querySelectorAll('th');
-            var rowlen = rows[i].children.length;
-            if (ths.length > 0 && ths.length === rowlen) {
-              rows[i].remove();
-            }
-          }
-        })(document);
-      </script>
 
       <script>
         /* Lanyon & Poole are Copyright (c) 2014 Mark Otto. Adapted to Pelican 20141223 and extended a bit by @thomaswilley */
