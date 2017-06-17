@@ -5,12 +5,11 @@ styles, `#sidebar-checkbox` for behavior. -->
 <div class="sidebar" id="sidebar">
   <div class="sidebar-item">
     <div class="profile">
-      <img src="{{ SITEURL }}/theme/img/profile.png"/>
+        <a href="{{ AUTHORLINK }}"><img src="{{ SITEURL }}/theme/img/profile.png"/></a>
     </div>
   </div>
 
   <nav class="sidebar-nav">
-  <a class="sidebar-nav-item" href="/">All</a>
 
   {% for category, articles in categories %}
       <a class="sidebar-nav-item" href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a>
@@ -20,9 +19,10 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   {% for page in pages %}
       <a class="sidebar-nav-item" href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>
-
-	  <div class="sidebar-nav-item">&nbsp;</div>
   {% endfor %}
+      <a class="sidebar-nav-item" href="{{ ARCHIVES_URL }}">Archive</a>
+
+      <div class="sidebar-nav-item">&nbsp;</div>
 
   {% for title, href in LINKS %}
   <a class="sidebar-nav-item" href="{{ href }}">{{ title }}</a>
