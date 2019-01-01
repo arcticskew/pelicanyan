@@ -20,7 +20,7 @@ styles, `#sidebar-checkbox` for behavior. -->
   {% for page in pages %}
       <a class="sidebar-nav-item" href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>
   {% endfor %}
-      <a class="sidebar-nav-item" href="{{ ARCHIVES_URL }}">Archive</a>
+      <a class="sidebar-nav-item" href="{{ SITEURL }}/{{ ARCHIVES_URL }}">Archive</a>
 
       <div class="sidebar-nav-item">&nbsp;</div>
 
@@ -31,7 +31,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   <div class="sidebar-item">
     <p>
-        &copy; 2018
+	&copy; 2019
     <a href="{{ AUTHORLINK }}">{{ AUTHOR }}</a>
     </p>
     <p class="tiny-note">
