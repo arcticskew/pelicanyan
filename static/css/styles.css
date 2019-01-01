@@ -40,3 +40,9 @@ img {
 .twitter-tweet {
     margin: 0 auto;
 }
+a.post-category {
+    color: #757575;
+}
+.linenos {
+    display: none;
+}
